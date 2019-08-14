@@ -1,0 +1,20 @@
+@(identForm : Form[Identification])
+
+<html>
+	<head>
+		<title>Update Identification</title>
+	</head>
+	<body>
+		<h1>Update Identification</h1>
+		@helper.form(action = routes.RestController.updateIdentification()) {
+
+
+        @helper.inputText(identForm("idntId"))
+        @helper.inputText(identForm("compId"))
+        @helper.inputText(identForm("idntName"))
+        <button type="submit">Update Identification</button>
+
+    }
+	</body>
+</html>
+
