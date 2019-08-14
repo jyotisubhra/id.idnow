@@ -1,0 +1,22 @@
+@(compForm : Form[Company])
+
+<html>
+	<head>
+		<title>Update Company</title>
+	</head>
+	<body>
+		<h1>Update Company</h1>
+		@helper.form(action = routes.RestController.updateCompany()) {
+
+
+        @helper.inputText(compForm("compId"))
+        @helper.inputText(compForm("compName"))
+        @helper.inputText(compForm("slaTime"))
+        @helper.inputText(compForm("slaPercentage"))
+        @helper.inputText(compForm("currentSlaPercentage"))
+        <button type="submit">Update Company</button>
+
+    }
+	</body>
+</html>
+

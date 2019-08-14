@@ -1,0 +1,20 @@
+@(identForm : Form[Identification])
+
+<html>
+	<head>
+		<title>Create Identification</title>
+	</head>
+	<body>
+		<h1>Create Identification</h1>
+		@helper.form(action = routes.RestController.startIdentification()) {
+
+
+        @helper.inputText(identForm("idntId"))
+        @helper.inputText(identForm("compId"))
+        @helper.inputText(identForm("idntName"))
+        <button type="submit">Create Identification</button>
+
+    }
+	</body>
+</html>
+
